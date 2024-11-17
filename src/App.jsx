@@ -13,6 +13,7 @@ import Income from "./pages/Host/Income";
 import Reviews from "./pages/Host/Reviews.jsx";
 import HostVans from "./pages/Host/HostVans.jsx";
 import HostVanDetail from "./pages/Host/HostVanDetail.jsx";
+import HostVanInfo from "./pages/Host/HostVanInfo.jsx";
 
 export default function App() {
   return (
@@ -31,7 +32,9 @@ export default function App() {
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
               <Route path="vans" element={<HostVans />} />
-              <Route path="vans/:id" element={<HostVanDetail />} />
+              <Route path="vans/:id" element={<HostVanDetail />}>
+                <Route index element={<HostVanInfo />} />
+              </Route>
             </Route>
           </Route>
 
