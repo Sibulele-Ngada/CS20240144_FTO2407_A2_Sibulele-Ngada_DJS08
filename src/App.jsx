@@ -13,18 +13,17 @@
  * Review challenge: do all the CSS yourself based on the design
  * linked in the slides.
  */
-
-import { getVans } from "../api";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 
 export default function App() {
-  async function loadVans() {
-    try {
-      const data = await getVans();
-      console.log(data);
-    } catch (err) {
-      console.log(`Error:${err}`);
-    }
-  }
-  loadVans();
-  return <h1>Start here</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
