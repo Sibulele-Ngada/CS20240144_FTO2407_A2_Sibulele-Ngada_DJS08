@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Vans from "./pages/Vans/Vans";
 import VanDetail from "./pages/Vans/VanDetail";
 import Dashboard from "./pages/Host/Dashboard";
+import Income from "./pages/Host/Income";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route element={<AuthRequired />}>
             <Route path="host" element={<HostLayout />}>
               <Route index element={<Dashboard />} />
+              <Route path="income" element={<Income />} />
             </Route>
           </Route>
 
