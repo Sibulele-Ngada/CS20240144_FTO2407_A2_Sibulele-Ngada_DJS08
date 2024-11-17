@@ -22,6 +22,7 @@ import NotFound from "./pages/NotFound";
 import Vans from "./pages/Vans/Vans";
 import VanDetail from "./pages/Vans/VanDetail";
 import HostLayout from "./components/HostLayout";
+import AuthRequired from "./components/AuthRequired";
 
 export default function App() {
   return (
@@ -34,7 +35,9 @@ export default function App() {
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
 
-          <Route path="host" element={<HostLayout />}></Route>
+          <Route element={<AuthRequired />}>
+            <Route path="host" element={<HostLayout />}></Route>
+          </Route>
 
           <Route path="*" element={<NotFound />} />
         </Route>
