@@ -14,6 +14,7 @@ import Reviews from "./pages/Host/Reviews.jsx";
 import HostVans from "./pages/Host/HostVans.jsx";
 import HostVanDetail from "./pages/Host/HostVanDetail.jsx";
 import HostVanInfo from "./pages/Host/HostVanInfo.jsx";
+import HostVanPricing from "./pages/Host/HostVanPricing.jsx";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
               <Route path="vans" element={<HostVans />} />
               <Route path="vans/:id" element={<HostVanDetail />}>
                 <Route index element={<HostVanInfo />} />
+                <Route path="pricing" element={<HostVanPricing />} />
               </Route>
             </Route>
           </Route>
