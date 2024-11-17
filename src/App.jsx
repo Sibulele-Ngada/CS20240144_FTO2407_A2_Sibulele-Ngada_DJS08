@@ -12,6 +12,7 @@ import Dashboard from "./pages/Host/Dashboard";
 import Income from "./pages/Host/Income";
 import Reviews from "./pages/Host/Reviews.jsx";
 import HostVans from "./pages/Host/HostVans.jsx";
+import HostVanDetail from "./pages/Host/HostVanDetail.jsx";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
               <Route path="vans" element={<HostVans />} />
+              <Route path="vans/:id" element={<HostVanDetail />} />
             </Route>
           </Route>
 
