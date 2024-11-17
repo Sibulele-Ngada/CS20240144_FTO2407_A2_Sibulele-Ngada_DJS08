@@ -10,6 +10,7 @@ import Vans from "./pages/Vans/Vans";
 import VanDetail from "./pages/Vans/VanDetail";
 import Dashboard from "./pages/Host/Dashboard";
 import Income from "./pages/Host/Income";
+import Reviews from "./pages/Host/Reviews";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="host" element={<HostLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
+              <Route path="reviews" element={<Reviews />} />
             </Route>
           </Route>
 
