@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { loginUser } from "../../api";
+// import { loginUser } from "../../api";
 
 export default function Login() {
   const [loginFormData, setLoginFormData] = React.useState({
@@ -14,6 +14,14 @@ export default function Login() {
   const navigate = useNavigate();
 
   const from = location.state?.from || "/host";
+
+  async function loginUser(userData) {
+    if (userData.email === "b@b.com" && userData.password === "p123") {
+      return "Welcome back, Bob";
+    } else {
+      throw new Error("Email or password is incorrect");
+    }
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
